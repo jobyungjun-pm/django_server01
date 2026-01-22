@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'polls/index.css' %}">
+</head>
+
+<body>
+    {% include "polls/header.html" %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% include "polls/footer.html" %}
+
+</body>
